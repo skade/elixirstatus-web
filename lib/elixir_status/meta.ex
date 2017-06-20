@@ -4,7 +4,7 @@ defmodule ElixirStatus.Meta do
   """
 
   @description """
-    Elixir news and status updates from the community for Elixir and Phoenix
+    Rust news and status updates from the community
   """
 
   def html_title, do: @description

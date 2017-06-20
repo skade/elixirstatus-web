@@ -13,8 +13,15 @@ use Mix.Config
 # which you typically run after static files are built.
 config :elixir_status, ElixirStatus.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "elixirstatus.com"],
-  cache_static_manifest: "priv/static/manifest.json"
+  url: [host: "status.yakshav.es"],
+  cache_static_manifest: "priv/static/manifest.json",
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+config :elixir_status, ElixirStatus.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  ssl: true
 
 # ## SSL Support
 #
@@ -33,7 +40,7 @@ config :elixir_status, ElixirStatus.Endpoint,
 # Do not print debug messages in production
 config :logger, :console, level: :info
 
-config :elixir_status, :base_url, "http://elixirstatus.com"
+config :elixir_status, :base_url, "https://status.yakshav.es"
 
 # ## Using releases
 #
@@ -50,4 +57,3 @@ config :elixir_status, :base_url, "http://elixirstatus.com"
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"

@@ -13,9 +13,10 @@ use Mix.Config
 # which you typically run after static files are built.
 config :elixir_status, ElixirStatus.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "status.yakshav.es"],
+  url: [scheme: "https", host: "status.yakshav.es", port: 443],
   cache_static_manifest: "priv/static/manifest.json",
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
 
 config :elixir_status, ElixirStatus.Repo,
   adapter: Ecto.Adapters.Postgres,

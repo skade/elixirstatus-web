@@ -2,7 +2,7 @@
   <div class="container">
     <div class="sidebar-header">
       <a href="/"><img src="<%= static_path(@conn, "/images/logo.png") %>" class="logo"/></a>
-      <h1 class="sidebar-header__title"><a href="/">RustStatus</a></h1>
+      <h1 class="sidebar-header__title"><a href="/">Rust Herald</a></h1>
       <p class="sidebar-header__text"><%= gettext "Announce your new project, blog post or version update." %></p>
     </div>
   </div>
@@ -21,7 +21,7 @@
       <% end %>
       <span class="sidebar-nav-item sidebar-nav-item--text"><%= gettext "You can follow via" %></span>
       <a class="sidebar-nav-item no-hover-decoration" href="http://this-week-in-rust.org/" target="_blank"><span class="hover-decoration">This Week In Rust</span></a>
-      <a class="sidebar-nav-item" href="https://twitter.com/RustStatus" target="_blank">Twitter</a>
+      <a class="sidebar-nav-item" href="https://twitter.com/RustHerald" target="_blank">Twitter</a>
       <a class="sidebar-nav-item" href="/rss">RSS</a>
 
       <span class="sidebar-nav-item sidebar-nav-item--text"><%= gettext "Running on Phoenix!" %></span>

@@ -50,8 +50,8 @@ config :logger, :console, level: :info
 
 config :elixir_status, :base_url, "https://status.yakshav.es"
 
-config :elixir_status, :twitter_screen_name, "RustHerald"
-config :elixir_status, :twitter_dm_recipient, "RustHerald"
+config :elixir_status, :twitter_screen_name, System.get_env("TWITTER_SCREEN_NAME")
+config :elixir_status, :twitter_dm_recipient, System.get_env("TWITTER_DM_RECIPIENT")
 
 config :elixir_status, :admin_user_ids, [1]
 config :elixir_status, :admin_overview_iframe_url, "http://twitter.com/"

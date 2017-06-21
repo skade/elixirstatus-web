@@ -105,15 +105,15 @@ defmodule ElixirStatus.Publisher do
       else
         ""
       end
-    #hashtag = "#elixirlang"
-    hashtag = "/cc @elixirweekly"
+    #hashtag = "#rustlang"
+    hashtag = "/cc @rustlang"
 
     # 140 = magic number for "tweet text can be this long"
     #  23 = magic number for "all urls on twitter are this long"
-    text = "#{short_title(title, 140-String.length(suffix)-1-23-1-String.length(hashtag))}#{suffix} #{short_url(permalink)} #{hashtag}"
+    text = "#{short_title(title, 140-String.length(suffix)-1-23-1-String.length(hashtag))}#{suffix} #{short_url(permalink)}"
 
     if String.length(text) < 128 do
-      "#{text} #elixirlang"
+      "#{text} #rustlang"
     else
       text
     end

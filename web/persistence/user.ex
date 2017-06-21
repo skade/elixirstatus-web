@@ -19,15 +19,13 @@ defmodule ElixirStatus.Persistence.User do
   end
 
   def find_or_create(user_auth_params) do
-    %{"login" => user_name, "avatar_url" => url} = user_auth_params
-    try do
-      ElixirStatus.Avatar.load! user_name, url
-    rescue
-      e -> IO.inspect {"error", e}
-    end
-
+    %{"login" => user_name, "avatar_url" => avatar_url} = user_auth_params
     case find_by_user_name(user_name) do
       nil -> create_from_auth_params(user_auth_params)
+      user = %User{avatar_url: nil} when not is_nil avatar_url ->
+        user
+        |> User.changeset(%{avatar_url: avatar_url})
+        |> Repo.update!
       user -> user
     end
   end
@@ -37,6 +35,7 @@ defmodule ElixirStatus.Persistence.User do
       full_name: user_auth_params["name"],
       user_name: user_auth_params["login"],
       email: user_auth_params["email"],
+      avatar_url: user_auth_params["avatar_url"],
       provider: "github"
     } |> Repo.insert!
   end

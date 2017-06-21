@@ -3,7 +3,7 @@
   <channel>
     <title>ElixirStatus</title>
     <description><%= ElixirStatus.Meta.rss_title %></description>
-    <link><%= ElixirStatus.URL.from_path("/") %></link>
+    <link><%= ElixirStatus.URL.absolute("/") %></link>
     <%= for posting <- @postings do %>
       <item>
         <title><![CDATA[<%= xml_strip_tags posting.title %>]]></title>
@@ -11,7 +11,7 @@
           <table width="100%" border="0">
             <tr>
               <td width=80 valign=top>
-                <img src="<%= ElixirStatus.URL.from_path("/rss/avatar/#{posting.user.user_name}?uid=#{posting.uid}") %>" width="64" height="64" />
+                <img src="<%= ElixirStatus.URL.absolute("/rss/avatar/#{posting.user.user_name}?uid=#{posting.uid}") %>" width="64" height="64" />
               </td>
               <td>
                 <h1><%= xml_strip_tags posting.title %></h1>

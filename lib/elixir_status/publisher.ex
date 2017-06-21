@@ -159,9 +159,9 @@ defmodule ElixirStatus.Publisher do
   defp short_url(permalink) do
     uid =
       "/p/#{permalink}"
-      |> ElixirStatus.URL.from_path
+      |> ElixirStatus.URL.absolute
       |> LinkShortener.to_uid
     "/=#{uid}"
-    |> ElixirStatus.URL.from_path
+    |> ElixirStatus.URL.absolute
   end
 end

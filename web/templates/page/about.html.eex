@@ -1,9 +1,9 @@
 <div class="page">
   <h2 class="page_title">What is this?</h2>
   <div class="page_body">
-    <p>ElixirStatus is a site <a href="https://github.com/rrrene/elixirstatus-web/network/members">built by the community</a> to provide <strong>an outlet where we can post stuff we have created</strong>.</p>
+    <p>The Rust Herald is a site maintained by the Rust community to promote your Rust work. It is based on ElixirStatus, <a href="https://github.com/rrrene/elixirstatus-web/network/members">built by the Elixir community</a> to provide <strong>an outlet where people can post stuff they have created</strong>.</p>
 
-    <h2 class="page_title">So it's like Reddit?</h2>
+    <h2 class="page_title">An ongoing community stream</h2>
     <p>It is not so much a link sharing platform where you post stuff you <em>find</em>, but more of a creator-hub where <strong>you can post when you have something new to announce</strong>, like:</p>
 
     <ul>
@@ -16,14 +16,10 @@
 
     <h2 class="page_title">Why should I post my stuff here?</h2>
     <p>
-      ElixirStatus is just infrastructure. <strong>Your announcement will appear</strong> on this website, but more importantly it will be distributed via <a href="http://elixirstatus.com/rss">RSS</a>, on <a href="https://twitter.com/elixirstatus">Twitter</a> and <a href="https://elixirweekly.net/">ElixirWeekly</a>. Thousands of Elixir enthusiasts are following along.
+      Rust Herald is just infrastructure. <strong>Your announcement will appear</strong> on this website, but more importantly it will be distributed via <a href="http://rustherald.org/rss">RSS</a>, on <a href="https://twitter.com/rustherald">Twitter</a>. It might end up in <a href="https://this-week-in-rust.org/">This Week in Rust</a>.
     </p>
 
-    <p>The idea is to have something akin to what <a href="http://rubyflow.com/">RubyFlow</a> is for Ruby, but bringing the Elixir community's ideas to the table.</p>
-
-    <h2 class="page_title">Closing thoughts</h2>
-    <p>Last but not least, ElixirStatus is a web app written in <strong>Elixir+Phoenix running in production</strong>.</p>
-
-    <p>Together with sites like <a href="http://jobs.elixirdose.com/">Elixir Jobs</a> it is <strong>intended to serve as a case study</strong> for the community, so <strong>you can point your boss to these sites</strong> if he or she wants to see "proof" that this "Elixir thing" is actually a viable alternative to Ruby/Python/Node when building the next web project.</p>
+    <h2 class="page_title">Credits</h2>
+    <p>ElixirStatus is a web app written in <strong>Elixir+Phoenix running in production</strong>. Elixir is awesome!</p>
   </div>
 </div>

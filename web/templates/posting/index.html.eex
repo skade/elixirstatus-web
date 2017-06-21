@@ -57,7 +57,7 @@
         <a class="btn btn--sign-in" href="/auth"><i class="icon-git"></i> Sign in and post</a>
       </div>
       <div class="post__body">
-        Here you can post your blog posts, project updates and other Rust related news. The news will reach thousands of people via this site, RSS and <a href="https://twitter.com/elixirstatus" target="_blank">Twitter</a>.
+        Here you can post your blog posts, project updates and other Rust related news. The news will reach people via this site, RSS and <a href="https://twitter.com/RustHerald" target="_blank">Twitter</a>.
       </div>
     </div>
   <% end %>

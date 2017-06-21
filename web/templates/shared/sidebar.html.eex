@@ -1,4 +1,4 @@
-rdiv class="sidebar">
+<div class="sidebar">
   <div class="container">
     <div class="sidebar-header">
       <a href="/"><img src="<%= static_path(@conn, "/images/logo.png") %>" class="logo"/></a>

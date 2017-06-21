@@ -14,14 +14,14 @@
   width: 100%;
   overflow-y: auto;
   text-align: center;
-  color: rgba(255,255,255,.5);
-  background-color: #2e2148;
-  border: 2px solid #2e2148;
+  color: $sidebar_text_secondary;
+  background-color: $sidebar_background;
+  border: 2px solid $sidebar_background;
 }
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: $sidebar_text_primary;
 }
 
 .sidebar-header {
@@ -60,9 +60,13 @@
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
-  background: #150C1A;
+  background: $sidebar_item_background;
+  color: $sidebar_item_text_secondary;
   border-top: 1px solid #222;
   padding: 0.25rem;
+}
+a.sidebar-nav-item {
+  color: $sidebar_item_text_primary;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -70,7 +74,7 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   font-weight: bold;
-  background: #271134;
+  background: $sidebar_item_background_active;
 }
 
 /* Slide effect
@@ -104,7 +108,7 @@ a.sidebar-nav-item:focus {
   display: block;
   width: 2.2rem;
   padding: .5rem .65rem;
-  color: #FFFFFF;
+  color: $sidebar_toggle_color;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -164,7 +168,7 @@ a.sidebar-nav-item:focus {
     padding: 2rem 1rem 1rem 1rem;
 
     border-bottom-color: transparent;
-    border-right-color: #63407d;
+    border-right-color: $sidebar_border;
   }
 
   .sidebar-header {
@@ -202,6 +206,10 @@ a.sidebar-nav-item:focus {
   .sidebar-nav-item {
     background: transparent;
     border: none;
+    color: $sidebar_text_secondary;
+  }
+  a.sidebar-nav-item {
+    color: $sidebar_text_primary;
   }
 }
 

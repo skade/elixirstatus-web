@@ -9,6 +9,21 @@ $tablet_portrait_width: 768px;
 $phablet_landscape_width: 600px;
 $phablet_portrait_width: 400px;
 
+$sidebar_background: #eee;
+$sidebar_border: #ccc;
+$sidebar_text_primary: #000;
+$sidebar_text_secondary: rgba(0,0,0,.5);
+$sidebar_toggle_color: #000;
+$sidebar_item_background: #150C1A;
+$sidebar_item_text_primary: #FFF;
+$sidebar_item_text_secondary: rgba(255,255,255,.5);
+$sidebar_item_background_active: #271134;
+
+$sign_in_btn_background: #E43717;
+$sign_in_btn_background_hover: #FF7500;
+$sign_in_btn_border: #8E1E19;
+
+$post_body_link_color: #8E1E19;
 
 // 64em: tablet 1024px
 // 48em: 768

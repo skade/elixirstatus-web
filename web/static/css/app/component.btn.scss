@@ -32,13 +32,13 @@
 
 .btn--sign-in {
   color: #fff;
-  background-color: #78669E;
-  border-color: #6540B2;
+  background-color: $sign_in_btn_background;
+  border-color: $sign_in_btn_border;
 }
 .btn--sign-in:hover {
   color: #fff;
-  background-color: #8163C0;
-  border-color: #6540B2;
+  background-color: $sign_in_btn_background_hover;
+  border-color: $sign_in_btn_border;
 }
 
 body .content .post__body .btn--tweet,

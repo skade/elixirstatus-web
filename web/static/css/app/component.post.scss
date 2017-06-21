@@ -188,7 +188,7 @@ select.posting-type-selector {
 .post__body {
   a {
     word-break: break-word;
-    color: #5E49BA;
+    color: $post_body_link_color;
     text-decoration: underline;
   }
 }

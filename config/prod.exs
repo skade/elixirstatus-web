@@ -24,6 +24,13 @@ config :elixir_status, ElixirStatus.Repo,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
 
+config :ex_twitter, :oauth, [
+   consumer_key: String.to_integer(System.get_env("TWITTER_CONSUMER_KEY")),
+   consumer_secret: String.to_integer(System.get_env("TWITTER_CONSUMER_SECRET")),
+   access_token: String.to_integer(System.get_env("TWITTER_ACCESS_TOKEN")),
+   access_token_secret: String.to_integer(System.get_env("TWITTER_ACCESS_SECRET"))
+]
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key

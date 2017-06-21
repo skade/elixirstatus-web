@@ -3,6 +3,8 @@ defmodule ElixirStatus.GitHubAuthController do
 
   alias ElixirStatus.Persistence.User
 
+  @allowed_users Application.get_env(:elixir_status, :allowed_users)
+
   @doc """
   This action is reached via `/auth` and redirects to the OAuth2 provider
   based on the chosen strategy.
@@ -41,16 +43,26 @@ defmodule ElixirStatus.GitHubAuthController do
     response = OAuth2.Client.get!(client, "/user")
     user_auth_params = response.body
 
-    # Request the user's data with the access token
     sign_in_via_auth(conn, user_auth_params)
+  end
+
+  defp sign_in_allowed?(user_auth_params) do
+    case @allowed_users do
+      nil -> true
+      _ -> Enum.member?(@restricted_users, user_auth_params["login"])
+    end
   end
 
   defp sign_in_via_auth(conn, user_auth_params) do
     current_user = User.find_or_create(user_auth_params)
 
-    conn
-    |> put_session(:current_user_id, current_user.id)
-    |> assign(:current_user, current_user)
-    |> redirect(to: "/?just_signed_in=true")
+    if sign_in_allowed?(user_auth_params) do
+      conn
+      |> put_session(:current_user_id, current_user.id)
+      |> assign(:current_user, current_user)
+      |> redirect(to: "/?just_signed_in=true")
+    else
+      conn |> redirect(to: "/")
+    end
   end
 end

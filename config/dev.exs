@@ -39,6 +39,7 @@ config :elixir_status, :base_url, "http://elixir.status:4000"
 
 config :elixir_status, :twitter_screen_name, "elixirstatus"
 config :elixir_status, :twitter_dm_recipient, "elixirstatus"
+config :elixir_status, :allowed_users, nil
 
 config :elixir_status, :admin_user_ids, [1]
 config :elixir_status, :admin_overview_iframe_url, "http://twitter.com/"

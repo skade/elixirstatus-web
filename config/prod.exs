@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :elixir_status, ElixirStatus.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "status.yakshav.es", port: 443],
+  url: [scheme: "https", host: "herald.community.rs", port: 443],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   force_ssl: [rewrite_on: [:x_forwarded_proto]]
@@ -48,7 +48,7 @@ config :ex_twitter, :oauth, [
 # Do not print debug messages in production
 config :logger, :console, level: :info
 
-config :elixir_status, :base_url, "https://status.yakshav.es"
+config :elixir_status, :base_url, "https://herald.community.rs"
 
 config :elixir_status, :twitter_screen_name, System.get_env("TWITTER_SCREEN_NAME")
 config :elixir_status, :twitter_dm_recipient, System.get_env("TWITTER_DM_RECIPIENT")

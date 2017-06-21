@@ -1,0 +1,56 @@
+{
+  "name": "ElixirStatus",
+  "description": "An application to post status messages about Elixir or other languages",
+  "repository": "https://github.com/rrrene/elixirstatus-web",
+  "logo": "https://raw.githubusercontent.com/skade/elixirstatus-web/master/priv/static/images/logo.png",
+  "keywords": ["elixir", "social", "phoenix"],
+  "addons": [
+      "heroku-postgresql"
+  ],
+  "scripts": {
+    "postdeploy": "mix ecto.migrate"
+  },
+  "env": {
+    "CLIENT_ID": {
+      "description": "The client id of your GitHub application",
+      "required": true
+    },
+    "CLIENT_SECRET": {
+      "description": "The client secret of your GitHub application",
+      "required": true
+    },
+    "TWITTER_ACCESS_SECRET": {
+      "description": "The access secret of your Twitter application",
+      "required": true
+    },
+    "TWITTER_ACCESS_TOKEN": {
+      "description": "The access token of your Twitter application",
+      "required": true
+    },
+    "TWITTER_CONSUMER_KEY": {
+      "description": "The consumer key of your Twitter application",
+      "required": true
+    },
+    "TWITTER_CONSUMER_SECRET": {
+      "description": "The consumer secret of your Twitter application",
+      "required": true
+    },
+    "TWITTER_SCREEN_NAME": {
+      "description": "The Twitter screen name to post under",
+      "required": true
+    },
+    "TWITTER_DM_RECIPIENT": {
+      "description": "The Twitter account handling DMs",
+      "required": true
+    },
+    "POOL_SIZE": {
+      "description": "The size of the Postgres thread pool",
+      "value": "18",
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "description": "The secret key to encrypt cookies with",
+      "generator": "secret"
+    }
+  }
+}

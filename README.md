@@ -83,8 +83,9 @@ Now you can visit `localhost:4000` from your browser.
 
 I am no designer (as [Inch CI](https://inch-ci.org/) probably shows) *and* still relatively new to Elixir myself. So if you want to be part if this little exercise and help out, just ping me [on Twitter](https://twitter.com/rrrene) or [send me an email](https://github.com/rrrene).
 
+## Deploy on Heroku
 
-
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Author
 

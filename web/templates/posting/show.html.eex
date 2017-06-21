@@ -27,4 +27,3 @@
   </p>
 <% end %>
 
-<%= render ElixirStatus.SharedView, promo_template_name(), conn: @conn %>

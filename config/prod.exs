@@ -50,6 +50,13 @@ config :logger, :console, level: :info
 
 config :elixir_status, :base_url, "https://status.yakshav.es"
 
+config :elixir_status, :twitter_screen_name, "RustHerald"
+config :elixir_status, :twitter_dm_recipient, "RustHerald"
+
+config :elixir_status, :admin_user_ids, [1]
+config :elixir_status, :admin_overview_iframe_url, "http://twitter.com/"
+config :elixir_status, :admin_site_switcher_html, ""
+
 # ## Using releases
 #
 # If you are doing OTP releases, you need to instruct Phoenix

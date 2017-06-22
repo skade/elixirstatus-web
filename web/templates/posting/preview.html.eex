@@ -1,6 +1,6 @@
 <div class="post post--preview">
   <div class="post__avatar">
-    <div class="image" style="background-image: url(<%= raw avatar_path(current_user(@conn)) %>)"></div>
+    <div class="image" style="background-image: url(<%= raw current_user(@conn).avatar_url %>)"></div>
   </div>
 
   <h1 class="post__title"><%= strip_tags(@posting.title) %></h1>

@@ -1,7 +1,7 @@
 <div class="post" data-posting-uid="<%= raw @posting.uid %>">
   <div class="post__inner">
     <div class="post__avatar">
-      <div class="image" style="background-image: url(<%= raw @posting.user.avatar_url %>)"></div>
+      <div class="image" style="background-image: url(<%= raw avatar_path(@posting.user) %>)"></div>
     </div>
 
     <h1 class="post__title"><%= link strip_tags(@posting.title), to: permalink_posting_path(@conn, :show, @posting.permalink) %></h1>

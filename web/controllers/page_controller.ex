@@ -6,12 +6,8 @@ defmodule ElixirStatus.PageController do
   end
 
   def avatar(conn, %{"user_name" => user_name}) do
-    case ElixirStatus.Persistence.User.find_by_user_name(user_name) do
-      nil -> 404
-      %{avatar_url: nil} -> 
-        conn
-        |> send_file(200, "priv/static/images/github/#{user_name}.jpg")
-    end
+    conn
+    |> send_file(200, "priv/static/images/github/#{user_name}.jpg")
   end
 
   def index(conn, _params) do

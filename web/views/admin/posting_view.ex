@@ -3,7 +3,7 @@ defmodule ElixirStatus.Admin.PostingView do
 
   def to_short_uid(permalink) do
     "/p/#{permalink}"
-      |> ElixirStatus.URL.absolute
+      |> ElixirStatus.URL.from_path
       |> ElixirStatus.LinkShortener.to_uid
   end
 

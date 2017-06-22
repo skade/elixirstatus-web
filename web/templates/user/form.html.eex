@@ -1,6 +1,6 @@
 <div class="user">
   <div class="user-avatar">
-    <div class="image" style="background-image: url(<%= raw @current_user.avatar_url %>)"></div>
+    <div class="image" style="background-image: url(<%= raw avatar_path(@current_user.user_name) %>)"></div>
   </div>
   <%= form_for @changeset, @action, fn f -> %>
     <label for="user_twitter_handle">Twitter handle:</label>

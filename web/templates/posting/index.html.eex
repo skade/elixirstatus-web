@@ -26,7 +26,7 @@
       <% else %>
         <div class="post post--sign-in-to-post" id="js-post-new-wrapper">
           <div class="post__avatar">
-            <div class="image" style="background-image: url(<%= raw avatar_path(current_user(@conn).user_name) %>)"></div>
+            <div class="image" style="background-image: url(<%= raw current_user(@conn).avatar_url %>)"></div>
           </div>
           <a class="btn btn--sign-in" data-toggle="#post--new, #js-post-new-wrapper" href="#"><i class="icon-pen"></i> Submit a post</a>
         </div>
@@ -43,7 +43,7 @@
     <% else %>
       <div class="post post--sign-in-to-post" id="js-post-new-wrapper">
         <div class="post__avatar">
-          <div class="image" style="background-image: url(<%= raw avatar_path(current_user(@conn).user_name) %>)"></div>
+          <div class="image" style="background-image: url(<%= raw current_user(@conn).avatar_url %>)"></div>
         </div>
         <a class="btn btn--sign-in" href="/postings/new"><i class="icon-pen"></i> Submit another post</a>
       </div>

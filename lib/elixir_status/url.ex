@@ -6,5 +6,5 @@ defmodule ElixirStatus.URL do
   @base_url Application.get_env(:elixir_status, :base_url)
 
   @doc "Returns an absolute URL for a given +path+."
-  def from_path(path), do: "#{@base_url}#{path}"
+  def absolute(path), do: @base_url |> URI.merge(path) |> URI.to_string
 end

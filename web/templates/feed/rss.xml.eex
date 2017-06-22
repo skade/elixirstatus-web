@@ -33,7 +33,7 @@
 
                 <%= xml_sanitized_markdown posting.text %>
                 <hr>
-                <small><a href="<%= to_permalink(@conn, posting) %>">View on ElixirStatus</a></small>
+                <small><a href="<%= to_permalink(@conn, posting) %>">View on Rust Herald</a></small>
               </td>
             </tr>
           </table>

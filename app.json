@@ -51,6 +51,18 @@
     "SECRET_KEY_BASE": {
       "description": "The secret key to encrypt cookies with",
       "generator": "secret"
+    },
+    "MIX_ENV": {
+      "description": "This needs to be 'prod'",
+      "value": "prod"
     }
-  }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    },
+    {
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git"
+    }
+  ]
 }

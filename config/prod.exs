@@ -24,12 +24,12 @@ config :elixir_status, ElixirStatus.Repo,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
 
-#config :ex_twitter, :oauth, [
-#   consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
-#   consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET"),
-#   access_token: System.get_env("TWITTER_ACCESS_TOKEN"),
-#   access_token_secret: System.get_env("TWITTER_ACCESS_SECRET")
-#]
+config :ex_twitter, :oauth, [
+   consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
+   consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET"),
+   access_token: System.get_env("TWITTER_ACCESS_TOKEN"),
+   access_token_secret: System.get_env("TWITTER_ACCESS_SECRET")
+]
 
 # ## SSL Support
 #

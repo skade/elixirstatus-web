@@ -43,3 +43,10 @@ config :elixir_status, :twitter_dm_recipient, "elixirstatus"
 config :elixir_status, :admin_user_ids, [1]
 config :elixir_status, :admin_overview_iframe_url, "http://twitter.com/"
 config :elixir_status, :admin_site_switcher_html, ""
+
+config :ex_twitter, :oauth, [
+   consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
+   consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET"),
+   access_token: System.get_env("TWITTER_ACCESS_TOKEN"),
+   access_token_secret: System.get_env("TWITTER_ACCESS_SECRET")
+]

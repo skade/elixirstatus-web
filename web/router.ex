@@ -27,12 +27,6 @@ defmodule ElixirStatus.Router do
     plug :assign_current_user
   end
 
-  scope "/embed", ElixirStatus do
-    pipe_through :embedded
-
-    get "/", PostingController, :index
-  end
-
   scope "/", ElixirStatus do
     pipe_through :browser # Use the default browser stack
 
@@ -56,6 +50,12 @@ defmodule ElixirStatus.Router do
     put "/update_profile", UserController, :update, as: :update_user
 
     get "/=:uid", ShortLinkController, :show
+  end
+
+  scope "/embed", ElixirStatus do
+    pipe_through :embedded
+
+    get "/", PostingController, :index
   end
 
   scope "/auth", alias: ElixirStatus do

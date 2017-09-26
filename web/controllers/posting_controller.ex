@@ -23,6 +23,13 @@ defmodule ElixirStatus.PostingController do
   def index(conn, params) do
     page = ElixirStatus.Persistence.Posting.published(params)
 
+    canonical_params = Enum.filter(params, fn
+      {"ref", _} -> false
+      {"just_signed_in", _} -> false
+      _ -> true
+    end)
+    canonical_url = posting_url(conn, :index, canonical_params)
+
     assigns =
       [
         postings: page.entries,
@@ -36,7 +43,8 @@ defmodule ElixirStatus.PostingController do
         current_posting_filter: params["filter"] |> nil_if_empty(),
         posting_filters: @posting_filters,
         search: params["q"] |> nil_if_empty(),
-        changeset: changeset()
+        changeset: changeset(),
+        canonical_url: canonical_url,
       ]
 
     conn
